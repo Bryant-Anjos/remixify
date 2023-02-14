@@ -8,31 +8,7 @@ type Module<Props = unknown, T = unknown> = {
   default: React.FC<Props>
   Layout?: React.FC<{ children: React.ReactNode }>
   ErrorBoundary?: React.FC
-  loader?: {
-    query: () => Promise<T>
-  }
-}
-
-type Loader<T> = {
-  query: () => Promise<T>
-  resolver?: (data: unknown) => T
-}
-
-export function createLoader<T>(
-  loader: Loader<T>,
-): Omit<Loader<T>, 'resolver'> {
-  const { resolver, ...params } = loader
-
-  return {
-    ...params,
-    query: async () => {
-      const result = await params.query()
-      if (resolver) {
-        return resolver(result)
-      }
-      return result
-    },
-  }
+  loader?: () => Promise<T>
 }
 
 type Data<T extends () => Promise<unknown>> =
@@ -57,7 +33,7 @@ const RemixedContext = React.createContext(
 export default function remixify<Props extends Record<string, unknown>, T>(
   module: Module<Props, T>,
 ) {
-  const query = module.loader?.query ?? (async () => null)
+  const query = module.loader ?? (async () => null)
   const Component = module.default
   const Layout = module.Layout ?? React.Fragment
   const ErrorComponent = module.ErrorBoundary
