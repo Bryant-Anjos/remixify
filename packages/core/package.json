@@ -1,0 +1,19 @@
+{
+  "name": "@remixify/core",
+  "version": "0.0.1",
+  "author": "Bryant Moreira dos Anjos",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@remixify/react-query",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "@tanstack/react-query": "*"
+  },
+  "dependencies": {
+    "@remixify/core": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bryant-Anjos/remixify.git"
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "component",
+    "react native component",
+    "react-query",
+    "mobile",
+    "ios"
+  ],
+  "author": "Bryant Moreira dos Anjos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bryant-Anjos/remixify/issues"
+  },
+  "homepage": "https://github.com/Bryant-Anjos/remixify#readme",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@remixify/resolvers",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run build:react-query",
+    "build:react-query": "tsc"
+  }
+}

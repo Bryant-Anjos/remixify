@@ -1,0 +1,38 @@
+{
+  "name": "@remixify/native",
+  "version": "0.0.16",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "@remixify/core": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bryant-Anjos/remixify.git"
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "component",
+    "react native component",
+    "mobile",
+    "ios"
+  ],
+  "author": "Bryant Moreira dos Anjos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bryant-Anjos/remixify/issues"
+  },
+  "homepage": "https://github.com/Bryant-Anjos/remixify#readme",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
