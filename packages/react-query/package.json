@@ -12,7 +12,7 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@remixify/core": "0.0.2"
+    "@remixify/core": "0.0.3"
   },
   "repository": {
     "type": "git",
