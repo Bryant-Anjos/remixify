@@ -13,7 +13,7 @@ type LoaderFunction = (args: LoaderArguments) => Promise<unknown>
 type Module<Props = unknown> = {
   default: React.FC<Props>
   Layout?: React.FC<{ children: React.ReactNode }>
-  ErrorBoundary?: React.FC
+  ErrorBoundary?: React.ComponentProps<typeof ErrorBoundary>['fallback']
   loader?: LoaderFunction
   useLoaderParams?: () => unknown
 }

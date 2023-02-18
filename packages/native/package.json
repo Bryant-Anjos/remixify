@@ -1,17 +1,17 @@
 {
   "name": "@remixify/native",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "rimraf ./dist && tsc"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
   "dependencies": {
-    "@remixify/core": "0.0.1"
+    "@remixify/core": "0.0.2"
   },
   "repository": {
     "type": "git",

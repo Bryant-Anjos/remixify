@@ -4,15 +4,15 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "rimraf ./dist && tsc"
   },
   "peerDependencies": {
+    "@tanstack/react-query": "*",
     "react": "*",
-    "react-native": "*",
-    "@tanstack/react-query": "*"
+    "react-native": "*"
   },
   "dependencies": {
-    "@remixify/core": "0.0.1"
+    "@remixify/core": "0.0.2"
   },
   "repository": {
     "type": "git",

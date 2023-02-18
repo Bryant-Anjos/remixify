@@ -99,7 +99,7 @@ The following are optional functionalities that can be defined as desired by the
 The `ErrorBoundary` function needs to be exported and it should return a React component. This component will be called every time there is an error in the component wrapped by the `remixify` function.
 
 ```typescript
-export function ErrorBoundary() {
+export function ErrorBoundary({ error }) {
   return (
     <View
       style={{
@@ -110,6 +110,7 @@ export function ErrorBoundary() {
       }}
     >
       <Text style={{ color: 'white' }}>Oops an error!</Text>
+      <Text style={{ color: 'white' }}>{error.message}</Text>
     </View>
   )
 }
