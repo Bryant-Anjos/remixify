@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react",
     "allowJs": true,
-    "target": "ESNext",
+    "target": "ES5",
     "module": "ESNext",
     "declaration": true,
     "outDir": "./dist",

@@ -71,7 +71,7 @@
     "zod": "^3.19.1"
   },
   "lint-staged": {
-    "{src,__tests__}/**/*.{ts,tsx}": [
+    "{packages,__tests__}/**/*.{ts,tsx}": [
       "prettier --write",
       "eslint --cache --fix"
     ]

@@ -58,11 +58,9 @@ export default function remixify<Props extends Record<string, unknown>>(
   }
 }
 
-export function useLoaderData<
-  T extends { query: (...args: unknown[]) => unknown | Promise<unknown> },
->() {
+export function useLoaderData<T extends LoaderFunction>() {
   return React.useContext(RemixedContext) as UseQueryResult<
-    Awaited<ReturnType<T['query']>>,
+    Awaited<ReturnType<ReturnType<T>['query']>>,
     Error
   >
 }

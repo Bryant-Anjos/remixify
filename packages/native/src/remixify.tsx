@@ -19,12 +19,12 @@ type Module<Props = unknown> = {
 }
 
 type Data<T extends LoaderFunction> =
-  | { loading: true; data: null; error: null }
-  | { loading: false; data: Awaited<ReturnType<T>>; error: null }
-  | { loading: false; data: null; error: Error }
+  | { isLoading: true; data: null; error: null }
+  | { isLoading: false; data: Awaited<ReturnType<T>>; error: null }
+  | { isLoading: false; data: null; error: Error }
 
 const INITIAL_STATE: Data<LoaderFunction> = {
-  loading: true,
+  isLoading: true,
   error: null,
   data: null,
 }
@@ -53,9 +53,9 @@ export default function remixify<Props extends Record<string, unknown>>(
 
       loader({ params })
         .then(response =>
-          setData({ loading: false, data: response, error: null }),
+          setData({ isLoading: false, data: response, error: null }),
         )
-        .catch(error => setData({ loading: false, data: null, error }))
+        .catch(error => setData({ isLoading: false, data: null, error }))
     }, [params])
 
     React.useEffect(() => {

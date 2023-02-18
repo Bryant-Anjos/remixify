@@ -24,7 +24,7 @@ npm install @remixify/native
 
 In a file write a React Native component with `export default` and also define the optional `loader`, `Layout`, and `ErrorBoundary` with `named export` as show the example.
 
-The component uses useData from @remixify/native to fetch data from the loader function and the refetch function to fetch the data again.
+The component uses useLoaderData from @remixify/native to fetch data from the loader function and the refetch function to fetch the data again.
 
 ```typescript
 // Component.tsx
@@ -32,9 +32,9 @@ The component uses useData from @remixify/native to fetch data from the loader f
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-import { useData } from '@remixify/native'
+import { useLoaderData } from '@remixify/native'
 
-export async function loader() {
+export async function loader({ params }) {
   await new Promise(resolve => setTimeout(resolve, 1000))
 
   return {
@@ -59,9 +59,9 @@ export function ErrorBoundary() {
 }
 
 export default function Component() {
-  const { data, loading, refetch } = useLoaderData<typeof loader>()
+  const { data, isLoading, refetch } = useLoaderData<typeof loader>()
 
-  if (loading) {
+  if (isLoading) {
     return <Text>Loading...</Text>
   }
 
@@ -141,7 +141,7 @@ export function Layout({ children }) {
 
 The `loader` must be an exported asynchronous function that returns a value. The value can be anything, such as the response of an API call.
 
-The data returned by the loader can be accessed in the component created by remixify using a hook called `useLoaderData`. This hook returns an object with the value returned by the loader in an attribute called data, an attribute called loading indicating if the Promise of the loader has been resolved, and an attribute called error that will store any errors that occurred in the loader.
+The data returned by the loader can be accessed in the component created by remixify using a hook called `useLoaderData`. This hook returns an object with the value returned by the loader in an attribute called data, an attribute called isLoading indicating if the Promise of the loader has been resolved, and an attribute called error that will store any errors that occurred in the loader.
 
 The loader also receives an object with an attribute called params, which is defined in another function called useLoaderParams.
 
@@ -155,9 +155,9 @@ export async function loader({ params }) {
 }
 
 // inside the component
-const { data, loading, refetch } = useLoaderData<typeof loader>()
+const { data, isLoading, refetch } = useLoaderData<typeof loader>()
 
-if (loading) {
+if (isLoading) {
   return <Text>Loading...</Text>
 }
 
