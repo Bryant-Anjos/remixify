@@ -16,7 +16,7 @@ Check out the [@remixify/native docs](https://github.com/Bryant-Anjos/remixify/t
 
 `@remixify/react-query` is like `@remixify/native` but also provides integration with the popular data fetching library React Query. It makes it easy to manage and handle data fetching in React Native apps.
 
-Check out the [@remixify/react-query](https://github.com/Bryant-Anjos/remixify/tree/main/packages/react-query#readme) for more detailed information.
+Check out the [@remixify/react-query docs](https://github.com/Bryant-Anjos/remixify/tree/main/packages/react-query#readme) for more detailed information.
 
 ## Getting started
 
