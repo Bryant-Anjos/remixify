@@ -1,6 +1,6 @@
 {
   "name": "@remixify/react-query",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,7 +12,7 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@remixify/core": "0.0.3"
+    "@remixify/core": "0.1.0"
   },
   "repository": {
     "type": "git",

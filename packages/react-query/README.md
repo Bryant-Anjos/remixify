@@ -1,4 +1,4 @@
-# Remixify with React Query (Alpha)
+# Remixify with React Query
 
 Remixify with React Query is a library for creating React Native components with integration with [React Query](https://tanstack.com/query/latest) for data management. If you prefer not to use React Query, you can use our sister library [@remixify/native](https://www.npmjs.com/package/@remixify/native) which provides the same features without the React Query integration.
 

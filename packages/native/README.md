@@ -1,4 +1,4 @@
-# Remixify (Alpha)
+# Remixify
 
 Remixify is a library for creating React Native components.
 

@@ -1,6 +1,6 @@
 {
   "name": "@remixify/core",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "author": "Bryant Moreira dos Anjos",
   "license": "MIT",
   "main": "dist/index.js",
