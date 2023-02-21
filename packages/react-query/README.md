@@ -118,6 +118,9 @@ export default remixify(Component)
 
 In this file, remixify is imported from @remixify/react-query and is used to wrap the imported Component to create a remixed component with the defined loader, Layout, and ErrorBoundary.
 
+If you don't want to create this configuration file every time you create a component with remixify, you can try or contribute to the development of our [@remixify/babel-plugin](../babel-plugin/README.md).  
+Note that `@remixify/babel-plugin` is in the early stages of development and its use is not yet recommended for production.
+
 ## Component API
 
 The following are optional functionalities that can be defined as desired by the user when using the remixify library. These functionalities are designed to allow for greater flexibility in customizing the behavior of the created components. Users can choose which functionalities to implement based on their specific needs and preferences. The `loader` is a required functionality, while the others are optional.

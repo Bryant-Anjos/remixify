@@ -1,10 +1,20 @@
 {
   "name": "@remixify/babel-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.js",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/traverse": "^7.20.13",
     "@babel/types": "^7.20.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bryant-Anjos/remixify.git"
+  },
+  "author": "Bryant Moreira dos Anjos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bryant-Anjos/remixify/issues"
+  },
+  "homepage": "https://github.com/Bryant-Anjos/remixify#readme"
 }
