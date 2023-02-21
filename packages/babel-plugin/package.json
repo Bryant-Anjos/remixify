@@ -1,0 +1,10 @@
+{
+  "name": "@remixify/babel-plugin",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/traverse": "^7.20.13",
+    "@babel/types": "^7.20.7"
+  }
+}
