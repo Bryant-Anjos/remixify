@@ -50,6 +50,16 @@ module.exports = declare((api, options) => {
             })
           }
 
+          const usesReactQuery = () => {
+            return namedExports.some(namedExport => {
+              const { declaration } = namedExport.node
+              if (t.isFunctionDeclaration(declaration)) {
+                return declaration.id.name === 'loader' && !declaration.async
+              }
+              return false
+            })
+          }
+
           const module = t.objectExpression(
             [
               getObjectMethodFromDefaultExport(),
@@ -60,9 +70,13 @@ module.exports = declare((api, options) => {
           if (defaultExport) {
             defaultExport.replaceWith(defaultExport.node.declaration)
 
+            const remixifyLibrary = usesReactQuery()
+              ? '@remixify/react-query'
+              : '@remixify/native'
+
             const remixifyImport = t.importDeclaration(
               [t.importDefaultSpecifier(t.identifier('remixify'))],
-              t.stringLiteral('@remixify/native'),
+              t.stringLiteral(remixifyLibrary),
             )
 
             const remixifyDefaultExport = t.exportDefaultDeclaration(

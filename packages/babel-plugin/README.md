@@ -32,7 +32,6 @@ Example with Expo:
 ```javascript
 module.exports = function (api) {
   api.cache(true)
-  api.debug = true
 
   return {
     presets: ['babel-preset-expo'],
@@ -71,7 +70,7 @@ export default function Component() {
     return <Text>Loading...</Text>
   }
 
-  return <Text>{data.message}emix</Text>
+  return <Text>{data.message}</Text>
 }
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@remixify/babel-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/index.js",
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -11,6 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/Bryant-Anjos/remixify.git"
   },
+  "keywords": [
+    "react",
+    "react native",
+    "babel",
+    "plugin",
+    "remixify"
+  ],
   "author": "Bryant Moreira dos Anjos",
   "license": "MIT",
   "bugs": {
